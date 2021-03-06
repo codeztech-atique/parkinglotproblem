@@ -16,4 +16,8 @@ export class SharedService {
   public getParkingCapacity(data) {
     return this.http.post(`${this.uri}/totalparkingslot`, data);
   }
+
+  public updateParkingCapacity(data) {
+    return this.http.post(`${this.uri}/totalparkingslot/calculate`, data);
+  }
 }

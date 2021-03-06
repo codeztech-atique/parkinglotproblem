@@ -6,31 +6,31 @@
         <form class="login-form" [formGroup]="inquiryForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label class="text-uppercase">Total parking slot *</label>
-            <input type="text" class="form-control" disabled="$1">
+            <input type="text" class="form-control" formControlName="total_parking" [(ngModel)]="totalParkingSpace" disabled="$1">
           </div>
 
           <div class="form-group">
             <label class="text-uppercase">Cars enter Reserve parking *</label>
-            <input type="number" class="form-control" formControlName="reserve_parking" min=0 oninput="validity.valid||(value='');">
+            <input type="number" class="form-control" formControlName="reserve_parking" [(ngModel)]="carsEnterInReserveParking" min=0 oninput="validity.valid||(value='');">
           </div>
           <div class="form-group">
             <label class="text-uppercase">Cars enter Non-Reserve parking *</label>
-            <input type="number" class="form-control" formControlName="non_reserve_parking" min=0 oninput="validity.valid||(value='');">
+            <input type="number" class="form-control" formControlName="non_reserve_parking" [(ngModel)]="carsEnterInNonReserveParking" min=0 oninput="validity.valid||(value='');">
           </div>
 
           <div class="form-group">
             <label class="text-uppercase">Cars left Reserve parking *</label>
-            <input type="number" class="form-control" formControlName="left_reserve_parking" min=0 oninput="validity.valid||(value='');">
+            <input type="number" class="form-control" formControlName="left_reserve_parking" [(ngModel)]="carsExitInReserveParking" min=0 oninput="validity.valid||(value='');">
           </div>
           <div class="form-group">
             <label class="text-uppercase">Cars left Non-Reserve parking *</label>
-            <input type="number" class="form-control" formControlName="left_non_reserve_parking" min=0 oninput="validity.valid||(value='');">
+            <input type="number" class="form-control" formControlName="left_non_reserve_parking" [(ngModel)]="carsExitInNonReserveParking" min=0 oninput="validity.valid||(value='');">
           </div>
 
 
           <div class="form-group">
             <label class="text-uppercase">Result</label>
-            <textarea class="form-control" style="overflow:auto;resize:none" formControlName="result" rows="8" disabled="$1"></textarea>
+            <textarea class="form-control" style="overflow:auto;resize:none;color: red;" formControlName="result" [(ngModel)]="output" rows="8" disabled="$1"></textarea>
           </div>
           <button [disabled]="!inquiryForm.valid" type="submit" class="btn btn-login float-right">Submit</button>
         </form>

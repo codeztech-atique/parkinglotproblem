@@ -17,6 +17,6 @@ import { SharedService } from "./services/shared.service";
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  providers: [SharedService, Shared / servicesService]
+  providers: [SharedService]
 })
 export class AppModule {}

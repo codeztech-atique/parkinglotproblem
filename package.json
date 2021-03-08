@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@angular/common": "^7.0.1",
-    "@angular/compiler": "^7.0.1",
-    "@angular/core": "^7.0.1",
-    "@angular/forms": "^7.0.1",
-    "@angular/platform-browser": "^7.0.1",
-    "@angular/platform-browser-dynamic": "^7.0.1",
-    "@angular/router": "^7.0.1",
-    "core-js": "^2.5.7",
-    "rxjs": "^6.3.3",
-    "zone.js": "^0.8.26"
+    "@angular/common": "7.2.16",
+    "@angular/compiler": "7.2.16",
+    "@angular/core": "7.2.16",
+    "@angular/forms": "7.2.16",
+    "@angular/platform-browser": "7.2.16",
+    "@angular/platform-browser-dynamic": "7.2.16",
+    "@angular/router": "7.2.16",
+    "core-js": "2.6.12",
+    "rxjs": "6.6.6",
+    "rxjs-compat": "^6.6.6",
+    "zone.js": "0.8.29"
   },
   "scripts": {
     "ng": "ng",
